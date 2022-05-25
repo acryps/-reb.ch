@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="512" height="512"></rect>
+        <polygon id="Path-3" fill="#FCF761" points="220.216728 33.5174513 296.073583 159.899597 352.980697 126.48531 397.369488 199.935542 209.159497 312.699457 188.142211 274.896461 118.711286 270.452617 68.340372 185.363484 113.490046 158.452315 86.7608213 110"></polygon>
+        <rect id="Rectangle" stroke="#000000" stroke-width="20" fill="#D8D8D8" transform="translate(309.628906, 353.242188) rotate(-31.000000) translate(-309.628906, -353.242188) " x="-53.8710937" y="270.242188" width="727" height="166"></rect>
+        <polyline id="Path" stroke="#000000" stroke-width="20" points="209.159497 312.699457 188.142211 274.896461 118.711286 270.452617 68.340372 185.363484 113.490046 158.452315 41.1425042 33.5174513"></polyline>
+        <line x1="386.5" y1="404.5" x2="438.5" y2="494.5" id="Line" stroke="#000000" stroke-width="20" stroke-linecap="square"></line>
+        <polyline id="Path-2" stroke="#000000" stroke-width="20" points="86.7608213 112.737513 220.216728 33.5174513 296.073583 159.899597 352.980697 126.48531 397.601079 199.935542"></polyline>
+        <line x1="255.216728" y1="83.5174513" x2="283" y2="6" id="Line-2" stroke="#000000" stroke-width="20" stroke-linecap="square"></line>
+        <text id="231" transform="translate(435.000000, 110.000000) rotate(-31.000000) translate(-435.000000, -110.000000) " font-family="OpenSans-Bold, Open Sans" font-size="50" font-weight="bold" fill="#000000">
+            <tspan x="392" y="129">231</tspan>
+        </text>
+        <text id="231" transform="translate(343.000000, 494.000000) rotate(-31.000000) translate(-343.000000, -494.000000) " font-family="OpenSans-Bold, Open Sans" font-size="50" font-weight="bold" fill="#000000">
+            <tspan x="300" y="513">231</tspan>
+        </text>
+        <text id="187" transform="translate(54.000000, 339.000000) rotate(-31.000000) translate(-54.000000, -339.000000) " font-family="OpenSans-Bold, Open Sans" font-size="50" font-weight="bold" fill="#000000">
+            <tspan x="11" y="358">187</tspan>
+        </text>
+        <text id="5101" transform="translate(202.428926, 415.531948) rotate(-31.000000) translate(-202.428926, -415.531948) " font-family="OpenSans-Bold, Open Sans" font-size="50" font-weight="bold" fill="#000000">
+            <tspan x="144.928926" y="434.531948">5101</tspan>
+        </text>
+    </g>
+</svg>
