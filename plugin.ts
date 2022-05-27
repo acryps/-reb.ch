@@ -26,10 +26,18 @@ section.add(new ui.Button('Export all as GeoJSON', () => {
 }));
 
 section.add(new ui.Separator());
-section.add(new ui.Paragraph(`Data is sourced from the official geospacial department of the Swiss Confederation, available publicly at ${Service.api} and ${Service.map.url}`));
+section.add(new ui.Paragraph(`Data is sourced from the official geospacial department of the Swiss Confederation, available publicly at ${Service.api}`));
 
-const layer = new map.layer.WMSLayer('ACRYPS KATASTER', Service.map.url, Service.map.layer, Service.map.parameters);
+const layer = new map.layer.WMSLayer('öreb', Service.map.url, Service.map.layer, Service.map.parameters, true);
 layer.hide(); 
+
+const keepMapToggle = new ui.Checkbox('Keep map when closing plugin', false);
+section.add(keepMapToggle);
+
+const keepMapStorageKey = 'keep-map';
+
+Storage.user.read(keepMapStorageKey).then(keep => keepMapToggle.value = keep || false);
+keepMapToggle.onValueChange.subscribe(keep => Storage.user.write(keepMapStorageKey, keep));
 
 layer.onPositionSelect.subscribe(position => {
     for (let parcel of parcels) {
@@ -53,7 +61,9 @@ section.onOpen.subscribe(() => {
 });
 
 section.onClose.subscribe(() => {
-    layer.hide();
+    if (!keepMapToggle.value) {
+        layer.hide();
+    }
 
     while (elements.length) {
         elements.pop().remove();
