@@ -1,7 +1,6 @@
 import { Parcel } from "./parcel";
 import { Service } from "./service";
 
-const elements: (map.Line | map.ColoredArea)[] = [];
 export const parcels: Parcel[] = [];
 
 const section = ui.createProjectPanelSection();
@@ -61,11 +60,17 @@ section.onOpen.subscribe(() => {
 });
 
 section.onClose.subscribe(() => {
-    if (!keepMapToggle.value) {
-        layer.hide();
+    if (keepMapToggle.value) {
+        return;
     }
 
-    while (elements.length) {
-        elements.pop().remove();
+    layer.hide();
+
+    while (parcels.length) {
+        const parcel = parcels.pop();
+
+        for (let element of parcel.elements) {
+            element.remove();
+        }
     }
 });
