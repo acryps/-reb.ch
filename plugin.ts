@@ -28,6 +28,7 @@ section.add(new ui.Separator());
 section.add(new ui.Paragraph(`Data is sourced from the official geospacial department of the Swiss Confederation, available publicly at ${Service.api}`));
 
 const layer = new map.layer.WMSLayer('öreb', Service.map.url, Service.map.layer, Service.map.parameters);
+layer.orderIndex = 'base';
 layer.hide(); 
 
 const keepMapToggle = new ui.Checkbox('Keep map when closing plugin', false);

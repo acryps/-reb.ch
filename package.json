@@ -14,7 +14,7 @@
 		"data.write"
 	],
 	"dependencies": {
-		"luucy-types": "^10.2.8",
+		"luucy-types": "^10.9.0",
 		"typescript": "^4.6.4"
 	}
 }
