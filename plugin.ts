@@ -4,7 +4,7 @@ import { Service } from "./service";
 export const parcels: Parcel[] = [];
 
 const section = ui.createProjectPanelSection();
-section.add(new ui.Paragraph('Click on the map to view property infos'));
+section.add(new ui.Paragraph('Click on the map to view property infos'.translate.german('Klicken Sie auf die Karte um die Informationen zum Gründstück anzuzeigen')));
 
 const container = new ui.Container();
 section.add(container);
