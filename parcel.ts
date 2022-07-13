@@ -93,7 +93,7 @@ export class Parcel {
                 modal.open();
             }));
 
-            this.section.add(new ui.Button('Export As GeoJSON', () => {
+            this.section.add(new ui.Button('Export As GeoJSON'.translate.german('GeoJSON Exportieren'), () => {
                 const file = File.fromString(`${parcel.egrid}.geojson`, JSON.stringify(this.toGeoJson(), null, '\t'));
 
                 ui.download(file);

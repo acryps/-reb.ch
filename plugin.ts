@@ -9,7 +9,7 @@ section.add(new ui.Paragraph('Click on the map to view property infos'));
 const container = new ui.Container();
 section.add(container);
 
-section.add(new ui.Button('Export all as GeoJSON'.translate.german('Alle Grundstücke als GeoJSON exportieren'), () => {
+section.add(new ui.Button('Export all as GeoJSON'.translate.german('Alle als GeoJSON exportieren'), () => {
     const file = File.fromString('parcels.json', JSON.stringify({
         type: 'FeatureCollection',
         features: parcels.map(parcel => ({
