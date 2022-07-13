@@ -30,7 +30,7 @@ export class Parcel {
         this.section.add(new ui.LabeledValue('LV03', this.position.toLV03().toString()));
         this.section.add(new ui.Separator());
     
-        const loading = new ui.Label('Loading...');
+        const loading = new ui.Label('Loading...'.translate.german('Lade Grundstückinformationen...'));
         this.section.add(loading);
 
         Service.fetch(this.position).then(parcel => {
@@ -39,7 +39,7 @@ export class Parcel {
             this.egrid = parcel.egrid;
 
             if (!parcel) {
-                this.section.add(new ui.Label('No results found!'));
+                this.section.add(new ui.Label('No results found!'.translate.german('Keine Daten gefunden!')));
     
                 return;
             }
@@ -61,10 +61,10 @@ export class Parcel {
             }
 
             this.section.add(new ui.LabeledValue('EGIRD', parcel.egrid));
-            this.section.add(new ui.LabeledValue('Area', area.toMetricAreaString()));
-            this.section.add(new ui.LabeledValue('Municipality', `${parcel.municipality} (${parcel.zip})`));
+            this.section.add(new ui.LabeledValue('Area'.translate.german('Fläche'), area.toMetricAreaString()));
+            this.section.add(new ui.LabeledValue('Municipality'.translate.german('Gemeinde'), `${parcel.municipality} (${parcel.zip})`));
 
-            const edgesCheckbox = new ui.Checkbox(`Show Edges (${length} Points)`, false);
+            const edgesCheckbox = new ui.Checkbox(`Show Edges (${length} Points)`.translate.german(`${length} Grenzpunkte Anzeigen`), false);
             edgesCheckbox.onValueChange.subscribe(() => {
                 if (edgesCheckbox.value) {
                     for (let polygon of this.polygons) {
@@ -83,8 +83,8 @@ export class Parcel {
 
             this.section.add(edgesCheckbox);
 
-            this.section.add(new ui.Button('View All Details', () => {
-                const modal = new ui.Modal(`${parcel.egrid} Properties`);
+            this.section.add(new ui.Button('View All Details'.translate.german('Alle Eigenschaften Anzeigen'), () => {
+                const modal = new ui.Modal(`${parcel.egrid} Properties`.translate.german(`${parcel.egrid} Eigenschaften`));
 
                 for (let key of Object.keys(parcel.source.properties).sort()) {
                     modal.add(new ui.LabeledValue(key.split('_').join(' ').toUpperCase(), parcel.source.properties[key]));
@@ -100,12 +100,12 @@ export class Parcel {
             }));
 
             if (parcel.pdf) {
-                this.section.add(new ui.LinkButton('Download Report', parcel.pdf));
+                this.section.add(new ui.LinkButton('Download Report'.translate.german('ÖREB-Auszug Herunterladen'), parcel.pdf));
             }
 
-            this.section.add(new ui.Button('Add as Shape', async () => {
+            this.section.add(new ui.Button('Add as Shape'.translate.german('Als Form hinzufügen'), async () => {
                 for (let element of this.elements) {
-                    await element.releaseToVariant(`Parcel ${this.egrid}`);
+                    await element.releaseToVariant(`Parcel ${this.egrid}`.translate.german(`Grundstück ${this.egrid}`));
                 }
 
                 this.elements = [];

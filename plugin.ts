@@ -9,7 +9,7 @@ section.add(new ui.Paragraph('Click on the map to view property infos'));
 const container = new ui.Container();
 section.add(container);
 
-section.add(new ui.Button('Export all as GeoJSON', () => {
+section.add(new ui.Button('Export all as GeoJSON'.translate.german('Alle Grundstücke als GeoJSON exportieren'), () => {
     const file = File.fromString('parcels.json', JSON.stringify({
         type: 'FeatureCollection',
         features: parcels.map(parcel => ({
@@ -25,13 +25,16 @@ section.add(new ui.Button('Export all as GeoJSON', () => {
 }));
 
 section.add(new ui.Separator());
-section.add(new ui.Paragraph(`Data is sourced from the official geospacial department of the Swiss Confederation, available publicly at ${Service.api}`));
+section.add(new ui.Paragraph(
+    `Data is sourced from the official geospacial department of the Swiss Confederation, available publicly at ${Service.api}`
+        .translate.german(`Die Daten stammen vom Bund und sind öffentlich unter ${Service.api} verfügbar`)
+));
 
 const layer = new map.layer.WMSLayer('öreb', Service.map.url, Service.map.layer, Service.map.parameters);
 layer.orderIndex = 'base';
 layer.hide(); 
 
-const keepMapToggle = new ui.Checkbox('Keep map when closing plugin', false);
+const keepMapToggle = new ui.Checkbox('Keep map when closing plugin'.translate.german('Karte offen halten'), false);
 section.add(keepMapToggle);
 
 const keepMapStorageKey = 'keep-map';
