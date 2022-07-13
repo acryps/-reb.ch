@@ -97,7 +97,7 @@ app.all('*', (req, res) => {
             alle angaben ohne gewähr - melden sie sich bei fehlern an die behörden, welche in den informationen der grundstücke vermerkt sind.
         </p>
 
-        <a href="https://luucy.ch/marketplace/170" target="_blank">
+        <a href="https://luucy.ch/marketplace/146" target="_blank">
             im luucy marketplace ansehen
         </a>
 
