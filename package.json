@@ -14,7 +14,7 @@
 		"data.write"
 	],
 	"dependencies": {
-		"luucy-types": "^10.9.0",
+		"luucy-types": "github:luucyadmin/luucy-types#next/parcels",
 		"typescript": "^4.6.4"
 	}
 }

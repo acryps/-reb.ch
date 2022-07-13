@@ -105,7 +105,7 @@ export class Parcel {
 
             this.section.add(new ui.Button('Add as Shape'.translate.german('Als Form hinzufügen'), async () => {
                 for (let element of this.elements) {
-                    await element.releaseToVariant(`Parcel ${this.egrid}`.translate.german(`Grundstück ${this.egrid}`));
+                    await element.releaseAsParcelToVariant(`Parcel ${this.egrid}`.translate.german(`Grundstück ${this.egrid}`));
                 }
 
                 this.elements = [];
