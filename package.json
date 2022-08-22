@@ -3,7 +3,7 @@
 	"displayName": "ÖREB.CH",
 	"icon": "icon.svg",
 	"author": "acryps GmbH",
-	"version": "1.3.2",
+	"version": "1.3.3",
 	"scopes": [
 		"core",
 		"ui",
