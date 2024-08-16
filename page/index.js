@@ -110,7 +110,7 @@ app.all('*', (req, res) => {
         </section>
 
         <footer>
-            © acryps / vlvt.in gmbh. wir sammeln keine daten über die verwendung dieses plugins oder dieser webseite.
+            © <a href="https://acryps.com">Acryps AG</a>. wir sammeln keine daten über die verwendung dieses plugins oder dieser webseite.
         </footer>
     </body>
 </html>`);
