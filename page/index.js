@@ -116,8 +116,6 @@ app.all('*', (req, res) => {
 </html>`);
 });
 
-setTimeout(() => {
-    app.listen(process.env.PORT || 1236, () => {
-        console.log(`öreb.ch started on ${process.env.PORT}`);
-    });
-}, 1000 * 30);
+app.listen(process.env.PORT || 1236, () => {
+    console.log(`öreb.ch started on ${process.env.PORT}`);
+});
